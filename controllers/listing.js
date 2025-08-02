@@ -88,11 +88,12 @@ module.exports.editListing = async (req, res) => {
 
 module.exports.updateListing = async (req, res) => {
     let { id } = req.params;
-    const { title, description, price, location, country } = req.body;
+    const { title, description, price, location, category, country } = req.body;
 
     const updatedData = {
         title,
         description,
+        category,
         price,
         location,
         country,
