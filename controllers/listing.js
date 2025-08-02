@@ -30,7 +30,7 @@ module.exports.createListing = async (req, res, next) => {
             limit: 1
         },
         headers: {
-            'User-Agent': 'YourAppName/1.0 (youremail@example.com)'
+            'User-Agent': 'WanderlustApp/1.0 (https://wanderlust-mfh4.onrender.com; sainlaliy9680@gmail.com)'
         }
     });
 
