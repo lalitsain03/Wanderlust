@@ -19,17 +19,24 @@
   .search-inp {
     border-radius: 25px;
     padding: 0.5rem 1.5rem;
+    min-width: 250px;
   }
 
   @media (max-width: 576px) {
     .search-inp {
       flex: 1 1 auto;
-      margin-bottom: 0.5rem;
     }
 
     .search-btn {
-      width: 100%;
+      width: auto;
     }
+  }
+
+  .navbar-collapse {
+    background: #fff;
+    /* 👈 visible background when expanded */
+    padding: 1rem;
+    border-radius: 8px;
   }
 </style>
 
@@ -40,27 +47,28 @@
       <i class="fa-regular fa-compass"></i>
     </a>
 
-    <!-- Toggler/collapsing button -->
+    <!-- Toggler -->
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup">
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <!-- Navbar content -->
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-      <div class="navbar-nav me-auto">
+    <!-- Collapse content -->
+    <div class="collapse navbar-collapse justify-content-between" id="navbarNavAltMarkup">
+      <!-- Left -->
+      <div class="navbar-nav me-auto mb-2 mb-md-0">
         <a class="nav-link" href="/listing">Explore</a>
       </div>
 
-      <!-- Search bar -->
-      <form class="d-flex flex-wrap gap-2 my-2 my-md-0" role="search">
-        <input class="form-control search-inp" type="search" placeholder="Search Destinations" aria-label="Search">
+      <!-- Center search bar -->
+      <form class="d-flex align-items-center" role="search">
+        <input class="form-control search-inp me-2" type="search" placeholder="Search Destinations" aria-label="Search">
         <button class="btn search-btn" type="submit">
           <i class="fa-solid fa-magnifying-glass"></i>Search
         </button>
       </form>
 
-      <!-- Right-side links -->
-      <div class="navbar-nav ms-md-3">
+      <!-- Right -->
+      <div class="navbar-nav ms-auto mt-2 mt-md-0">
         <a class="nav-link" href="/listing/new">Airbnb your home</a>
         <% if(!currUser) { %>
           <a class="nav-link" aria-current="page" href="/Signup"><b>Sign up</b></a>
