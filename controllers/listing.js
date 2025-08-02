@@ -113,7 +113,7 @@ module.exports.updateListing = async (req, res) => {
             limit: 1
         },
         headers: {
-            'User-Agent': 'YourAppName/1.0 (youremail@example.com)' // replace with real info
+            'User-Agent': 'WanderlustApp/1.0 (https://github.com/lalitsain03/Wanderlust)'
         }
     });
 
