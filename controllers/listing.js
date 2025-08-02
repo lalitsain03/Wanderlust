@@ -113,7 +113,7 @@ module.exports.updateListing = async (req, res) => {
             limit: 1
         },
         headers: {
-            'User-Agent': 'WanderlustApp/1.0 (https://github.com/lalitsain03/Wanderlust)'
+            'User-Agent': 'WanderlustApp/1.0 (https://wanderlust-mfh4.onrender.com  sainlaliy9680@gmail.com)'
         }
     });
 
